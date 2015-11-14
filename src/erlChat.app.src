@@ -1,0 +1,12 @@
+{application, erlChat,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { erlChat_app, []}},
+  {env, []}
+ ]}.
