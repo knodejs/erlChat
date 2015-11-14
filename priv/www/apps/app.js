@@ -33,5 +33,5 @@ app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider',
 app.value('ngSockPublicRetry', 10000);
 app.value('ngSockPrivateRetry', 10000);
 
-app.value('ngSockPublicUrl', '/messages');
-app.value('ngSockPrivateUrl', '/broadcast');
+app.value('ngSockPublicUrl', '/broadcast');
+app.value('ngSockPrivateUrl', '/chat');

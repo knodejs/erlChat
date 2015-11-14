@@ -1,12 +1,12 @@
-app.controller('DashboardCtrl', ['$scope', function($scope) {
+app.controller('DashboardCtrl', ['$scope','socketPublic','socketPrivate', function($scope,socketPublic,socketPrivate) {
 
 }]);
 
-app.controller('ChatCtrl', ['$scope', function($scope) {
+app.controller('ChatCtrl', ['$scope','socketPublic','socketPrivate', function($scope,socketPublic,socketPrivate) {
 
 }]);
 
-app.controller('ContactCtrl', ['$scope', function($scope) {
+app.controller('ContactCtrl', ['$scope','socketPublic','socketPrivate', function($scope,socketPublic,socketPrivate) {
 
 }]);
 
