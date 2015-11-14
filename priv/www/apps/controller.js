@@ -1,12 +1,89 @@
-app.controller('DashboardCtrl', ['$scope','socketPublic','socketPrivate', function($scope,socketPublic,socketPrivate) {
+app.controller('DashboardCtrl', ['$scope', 'socketPublic', 'socketPrivate', function($scope, socketPublic, socketPrivate) {
+
+
+
+
+    socketPrivate.onOpen(function() {
+        console.log('socketPrivate  opened');
+    });
+    socketPrivate.onMessage(function(res) {
+        console.log(res);
+    });
+    socketPrivate.onClose(function(res) {
+        console.log('socketPrivate closed... will try to reconnect in 5 seconds');
+    });
+
+
+    socketPublic.onOpen(function() {
+        console.log('socketPublic  opened');
+    });
+    socketPublic.onMessage(function(res) {
+        console.log(res);
+    });
+    socketPublic.onClose(function(res) {
+        console.log('socketPublic closed... will try to reconnect in 5 seconds');
+    });
+
 
 }]);
 
-app.controller('ChatCtrl', ['$scope','socketPublic','socketPrivate', function($scope,socketPublic,socketPrivate) {
+app.controller('ChatCtrl', ['$scope', 'socketPublic', 'socketPrivate', function($scope, socketPublic, socketPrivate) {
+    $scope.data = {};
+    $scope.messages=[];
+
+    $scope.sendData=function(){
+    	socketPublic.send($scope.data);
+    };
+
+
+    socketPublic.onOpen(function() {
+        console.log('socketPublic  opened');
+    });
+    socketPublic.onMessage(function(res) {
+        console.log(res);
+        $scope.messages.unshift(res);
+    });
+    socketPublic.onClose(function(res) {
+        console.log('socketPublic closed... will try to reconnect in 5 seconds');
+    });
+
+    socketPrivate.onOpen(function() {
+        console.log('socketPrivate  opened');
+    });
+    socketPrivate.onMessage(function(res) {
+        console.log(res);
+
+    });
+    socketPrivate.onClose(function(res) {
+        console.log('socketPrivate closed... will try to reconnect in 5 seconds');
+    });
 
 }]);
 
-app.controller('ContactCtrl', ['$scope','socketPublic','socketPrivate', function($scope,socketPublic,socketPrivate) {
+app.controller('ContactCtrl', ['$scope', 'socketPublic', 'socketPrivate', function($scope, socketPublic, socketPrivate) {
+
+
+    socketPublic.onOpen(function() {
+        console.log('socketPublic  opened');
+    });
+    socketPublic.onMessage(function(res) {
+        console.log(res);
+
+    });
+    socketPublic.onClose(function(res) {
+        console.log('socketPublic closed... will try to reconnect in 5 seconds');
+    });
+
+    socketPrivate.onOpen(function() {
+        console.log('socketPrivate  opened');
+    });
+    socketPrivate.onMessage(function(res) {
+        console.log(res);
+    });
+    socketPrivate.onClose(function(res) {
+        console.log('socketPrivate closed... will try to reconnect in 5 seconds');
+    });
+
 
 }]);
 
