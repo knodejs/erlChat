@@ -1,0 +1,18 @@
+{
+  "name": "erl",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Narongchai Thongkongkeaw <kerlang.2515@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/knodejs/erlChat",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
