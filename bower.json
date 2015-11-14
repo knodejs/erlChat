@@ -14,5 +14,11 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular-ui-router": "~0.2.15",
+    "angular-loading-bar": "~0.8.0",
+    "angular-resource": "~1.4.7"
+  }
 }
