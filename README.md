@@ -1,8 +1,8 @@
-Erlang Cowboy SockJs Angular Cowdb
+Erlang Cowboy SockJs Angular
 @window
 
 start
 
-sh start.sh
+start.sh
 
 http://localhost:8089/
