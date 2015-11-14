@@ -1,4 +1,12 @@
-var app = angular.module('app', ['angular-loading-bar', 'ngAnimate','ui.bootstrap','ui.router']);
+var app = angular.module('app', [
+		'angular-loading-bar', 
+		'ngAnimate','ui.bootstrap',
+		'ui.router',
+		'ng.sockjs.private',
+		'ng.sockjs.public'
+]);
+
+
 app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider',
     function($locationProvider, $stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise("/chat");
@@ -20,3 +28,10 @@ app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider',
             })
     }
 ]);
+
+
+app.value('ngSockPublicRetry', 10000);
+app.value('ngSockPrivateRetry', 10000);
+
+app.value('ngSockPublicUrl', '/messages');
+app.value('ngSockPrivateUrl', '/broadcast');
