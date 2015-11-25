@@ -1,6 +1,9 @@
 Erlang Cowboy SockJs Angular
 @window
 
+Compile
+rebar get-deps compile
+
 start
 
 start.sh
