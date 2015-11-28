@@ -29,10 +29,38 @@ app.controller('DashboardCtrl', ['$scope', 'socketPublic', 'socketPrivate', func
 
 app.controller('ChatCtrl', ['$scope', 'socketPublic', 'socketPrivate', function($scope, socketPublic, socketPrivate) {
     $scope.data = {};
-    $scope.messages=[];
+    $scope.messages = [];
 
-    $scope.sendData=function(){
-    	socketPublic.send($scope.data);
+    $scope.visible = true;
+    $scope.expandOnNew = true;
+
+    $scope.messages = [{
+        'username': 'Matt',
+        'content': 'Hi!'
+    }, {
+        'username': 'Elisa',
+        'content': 'Whats up?'
+    }, {
+        'username': 'Matt',
+        'content': 'I found this nice AngularJS Directive'
+    }, {
+        'username': 'Elisa',
+        'content': 'Looks Great!'
+    }];
+
+    $scope.username = 'Matt';
+
+    $scope.sendMessage = function(message, username) {
+        if (message && message !== '' && username) {
+            $scope.messages.push({
+                'username': username,
+                'content': message
+            });
+        }
+    };
+
+    $scope.sendData = function() {
+        socketPublic.send($scope.data);
     };
 
 
