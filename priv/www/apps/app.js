@@ -3,7 +3,8 @@ var app = angular.module('app', [
 		'ngAnimate','ui.bootstrap',
 		'ui.router',
 		'ng.sockjs.private',
-		'ng.sockjs.public'
+		'ng.sockjs.public',
+        'irontec.simpleChat'
 ]);
 
 
