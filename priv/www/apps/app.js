@@ -4,7 +4,8 @@ var app = angular.module('app', [
 		'ui.router',
 		'ng.sockjs.private',
 		'ng.sockjs.public',
-        'irontec.simpleChat'
+        'irontec.simpleChat',
+        'LocalStorageModule'
 ]);
 
 
