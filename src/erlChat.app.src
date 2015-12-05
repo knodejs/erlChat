@@ -16,5 +16,5 @@
                   xmerl
                  ]},
   {mod, { erlChat_app, []}},
-  {env, [{http_port, 8099}]}
+  {env, [{http_port, 8089}]}
  ]}.
