@@ -5,7 +5,15 @@
   {registered, []},
   {applications, [
                   kernel,
-                  stdlib
+                  stdlib,
+                  public_key,
+                  asn1,
+                  cowboy,
+                  cowlib,
+                  crypto,
+                  ranch,
+                  sockjs,
+                  xmerl
                  ]},
   {mod, { erlChat_app, []}},
   {env, [{http_port, 8099}]}
