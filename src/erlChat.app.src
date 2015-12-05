@@ -8,5 +8,5 @@
                   stdlib
                  ]},
   {mod, { erlChat_app, []}},
-  {env, []}
+  {env, [{http_port, 8099}]}
  ]}.
