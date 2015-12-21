@@ -1,5 +1,5 @@
 Erlang Cowboy SockJs Angular
-@window
+
 
 Compile
 
