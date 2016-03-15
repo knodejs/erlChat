@@ -1,4 +1,4 @@
-Erlang Cowboy SockJs Angular
+Erlang Cowboy 1.xxxx SockJs Angular
 
 
 Compile
