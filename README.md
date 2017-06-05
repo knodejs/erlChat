@@ -10,4 +10,5 @@ start
 start.sh
 
 http://localhost:8089/
- test
+test
+master test
